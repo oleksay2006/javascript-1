@@ -2,6 +2,7 @@ let clicks = 0;
 let div = document.createElement('div');
 let button = document.querySelector('container-btn');
 div.classList.add("container");
+div.classList.add('hidden');
 function hide() {
 	clicks += 1;
 	document.getElementById("container").style.display = 'none';
@@ -18,6 +19,7 @@ function hide_2() {
 	
 	if (clicks % 2 == 0) {
 		document.body.appendChild(div);
+		div.classList.remove('hidden')
 	}
 }
 function hide_3() {
