@@ -2,7 +2,7 @@ let clicks = 0;
 let div = document.createElement('div');
 let button = document.querySelector('container-btn');
 div.classList.add("container");
-div.classList.add('hidden');
+// div.classList.add('hidden');
 function hide() {
 	clicks += 1;
 	document.getElementById("container").style.display = 'none';
@@ -74,7 +74,25 @@ input.onfocus = function () {
 input.oninput = function () {
 	document.querySelector('.green').classList.add("hidden");
 }
-document.querySelector(".url-btn").onclick = function(){window.location.href=document.querySelector('.url').value}
+// document.querySelector(".url-btn").onclick = function(){
+// 	// window.location.href=document.querySelector('.url').value
+// 	document.body.appendChild(div);
+// 	div.classList.remove("hidden");
+// 	let img = new Image();
+// 	img.src = document.querySelector('.url').value;
+// 	div.appendChild(img);
+// }
+function url_all() {
+	document.body.appendChild(div);
+	let textarea = document.querySelector('textarea'),
+    button_2 = document.querySelector('.url-all-btn');
+    let myList = textarea.value.split('\n');
+    for (let i = 0, i < myList.length; i++) {
+        let img = new Image();
+		img.src = myList[i];
+		div.appendChild(img);
+    }
+}
 // input.onblur = function () {
 // 	document.querySelector('.green').classList.add("hidden");
 // }
