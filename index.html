@@ -7,14 +7,24 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div id='container' class = 'container hidden'></div>
-	<!-- <div id='container' class = 'container hidden'></div>
-	<div id='container' class = 'container hidden'></div>
-	<div id='container' class = 'container hidden'></div>
-	<div id='container' class = 'container hidden'></div> -->
+	<div id='1' class = 'container '></div>
+	<div id='2' class = 'container '></div>
+	<div id='3' class = 'container '></div>
+	<div id='4' class = 'container '></div>
+	<div id='5' class = 'container '></div>
 	<button class = 'container-btn' onclick = 'hide()'>display: none</button>
 	<button class = 'container-btn' onclick = 'hide_2()'>removeChild</button>
-	<button class = 'container-btn' onclick = 'hide_3()'>hidden</button><!-- onclick = 'hide()' -->
+	<button class = 'container-btn' onclick = 'hide_3()'>hidden</button><br><!-- onclick = 'hide()' -->
+	<input type="text" id = 'pole'>
+	<button class = 'container-btn' onclick = 'hide_4()'>display: none</button>
+	<button class = 'container-btn' onclick = 'hide_6()'>hidden</button>
+	<div class="yellow" onclick = 'yellow_block()'></div>
+	<div class="red hidden" onclick = 'red_block()'></div>
+	<button class = 'container-btn' onmouseover = 'hover()' onmouseout = 'un_hover()'>Hover</button><br>
+	<div class="green hidden"></div>
+	<input type="text" id = 'input'><br>
+	<input type="textarea" class = 'url'>
+	<button class = 'container-btn url-btn' onclick = 'url()'>URL</button>
 	<script src="main.js"></script>
 </body>
 </html>
