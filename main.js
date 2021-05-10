@@ -113,9 +113,10 @@ function successFunction(position) {
 // localStorage.setItem(document.querySelector('#local'), document.querySelector('#local').value);
 // let local = localStorage.getItem(document.querySelector('#local'));
 // document.querySelector('#local').value = local;
-
 function local() {
-	document.getElementById('local').value = localStorage.getItem('server');
-	let input_2 = document.getElementById("local").value;
-	localStorage.setItem("server", input_2);
+	let input_2 = document.getElementById("local");
+	localStorage.setItem("server", input_2.value);
+	let storedValue = localStorage.getItem("server");
+	document.getElementById('local').value = storedValue;
 }
+window.onload = function() {}
