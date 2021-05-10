@@ -58,7 +58,9 @@ function yellow_block() {
 	if (clicks == 1) {
 		alert('Привет');
 	}
-	if (clicks > 1) {document.querySelector('.yellow').classList.add("hidden");}
+	if (clicks > 1) {
+		document.querySelector('.yellow').classList.add("hidden");
+	}
 }
 function hover() {
 	document.querySelector('.red').classList.remove("hidden");
@@ -87,12 +89,33 @@ function url_all() {
 	let textarea = document.querySelector('textarea'),
     button_2 = document.querySelector('.url-all-btn');
     let myList = textarea.value.split('\n');
-    for (let i = 0, i < myList.length; i++) {
+    for (let i = 0; i < myList.length; i++) {
         let img = new Image();
 		img.src = myList[i];
 		div.appendChild(img);
     }
 }
-// input.onblur = function () {
-// 	document.querySelector('.green').classList.add("hidden");
-// }
+input.onblur = function () {
+	document.querySelector('.green').classList.add("hidden");
+}
+document.querySelector('body').onmousemove = function(event) {
+	document.querySelector('.x').innerHTML = event.offsetX;
+    document.querySelector('.y').innerHTML = event.offsetY;
+}
+navigator.geolocation.getCurrentPosition(successFunction);
+function successFunction(position) {
+	var lat = position.coords.latitude;
+    var long = position.coords.longitude;
+    document.querySelector('.sh').innerHTML = lat;
+    document.querySelector('.d').innerHTML = long;
+}
+
+// localStorage.setItem(document.querySelector('#local'), document.querySelector('#local').value);
+// let local = localStorage.getItem(document.querySelector('#local'));
+// document.querySelector('#local').value = local;
+
+function local() {
+	document.getElementById('local').value = localStorage.getItem('server');
+	let input_2 = document.getElementById("local").value;
+	localStorage.setItem("server", input_2);
+}

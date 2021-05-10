@@ -22,6 +22,28 @@
 	background-color: green;
 	margin-bottom: 15px;
 }
+.location {
+	position: fixed;
+	top: 200px;
+	right: 0;
+	width: 180px;
+    border: 10px solid crimson;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+.coords {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 180px;
+    border: 10px solid crimson;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
 .hidden {
 	background-color: transparent;
 }

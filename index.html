@@ -6,7 +6,7 @@
 	<title>Javascript Ш++ </title>
 	<link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body onload = 'local()'>
 	<div id='1' class = 'container '></div>
 	<div id='2' class = 'container '></div>
 	<div id='3' class = 'container '></div>
@@ -14,7 +14,7 @@
 	<div id='5' class = 'container '></div>
 	<button class = 'container-btn' onclick = 'hide()'>display: none</button>
 	<button class = 'container-btn' onclick = 'hide_2()'>removeChild</button>
-	<button class = 'container-btn' onclick = 'hide_3()'>hidden</button><br><!-- onclick = 'hide()' -->
+	<button class = 'container-btn' onclick = 'hide_3()'>hidden</button><br>
 	<input type="text" id = 'pole'>
 	<button class = 'container-btn' onclick = 'hide_4()'>display: none</button>
 	<button class = 'container-btn' onclick = 'hide_6()'>hidden</button>
@@ -27,6 +27,17 @@
 	<button class = 'container-btn url-btn'>URL</button><br>
 	<textarea name="" id="" cols="30" rows="10"></textarea>
 	<button class = 'container-btn url-all-btn' onclick = 'url_all()'>URL All</button><br>
+	<div class="coords">
+    	X: <span class="x"></span><br>
+    	Y: <span class="y"></span>
+	</div>
+	<div class = 'location'>
+		Ш: <span class="sh"></span><br>
+    	Д: <span class="d"></span>
+	</div>
+	<textarea name="" id="local" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis tellus in tortor sagittis aliquet eu quis urna. Cras fringilla quam scelerisque vulputate gravida.</textarea>
+	<textarea name="" id="cookies" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis tellus in tortor sagittis aliquet eu quis urna. Cras fringilla quam scelerisque vulputate gravida.</textarea>
+	<textarea name="" id="session" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis tellus in tortor sagittis aliquet eu quis urna. Cras fringilla quam scelerisque vulputate gravida.</textarea>
 	<script src="main.js"></script>
 </body>
 </html>
